@@ -24,24 +24,27 @@
     h1 {
       font-size: 3em;
       margin-top: 40px;
+      background: linear-gradient(90deg, #ff6a00, #ee0979, #9c27b0, #2196f3, #00bcd4, #4caf50, #ffeb3b, #ff6a00);
+      background-size: 400% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow-text 5s linear infinite;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
     }
 
     p {
       font-size: 1.5em;
       margin-bottom: 30px;
-      animation: fadeIn 3s ease-in-out;
+      background: linear-gradient(90deg, #ff0080, #7928ca, #2af598, #fecfef);
+      background-size: 400% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow-text 6s linear infinite;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    @keyframes rainbow-text {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
     }
 
     .gallery {
@@ -98,12 +101,12 @@
       transform: scale(1.1);
     }
 
-    /* 🎉 Vibrant Countdown Timer Style */
+    /* Vibrant Countdown Timer Style */
     #countdown {
       font-size: 2.5em;
       margin-top: 20px;
       padding: 20px 30px;
-      background: linear-gradient(135deg, #ff6a00, #ee0979); /* bright gradient */
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
       color: #ffffff;
       font-weight: bold;
       border-radius: 15px;
